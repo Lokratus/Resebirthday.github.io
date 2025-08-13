@@ -1772,6 +1772,7 @@ body {
         gap: 25px;
         align-items: center;
         padding-top: 2rem;
+        min-height: 100vh;
     }
 
     .title {
@@ -1781,9 +1782,19 @@ body {
         justify-content: center;
         font-family: "Comfortaa", "Titan One", sans-serif;
         font-size: 1.5rem;
-        letter-spacing: 8px;
+        letter-spacing: 4px;
         flex-direction: column;
         perspective: 1000px;
+        text-align: center;
+    }
+
+    .title .happy, .title .birthday {
+        font-size: 1.5rem;
+        text-shadow: 2px 2px var(--color-black), 
+                    -2px 2px var(--color-black), 
+                    2px -2px var(--color-black), 
+                    -2px -2px var(--color-black), 
+                    2px 4px 0 var(--color-black);
     }
 
     #btn__letter {
@@ -1803,7 +1814,6 @@ body {
         justify-content: center;
         cursor: pointer;
         z-index: 2;
-        /* transform: scale(1); */
         transition: all .5s ease-in-out;
     }
 
@@ -1922,6 +1932,7 @@ body {
         display: flex;
         align-items: center;
         border: 6px solid var(--color-black);
+        margin: 0 auto;
     }
 
     .name {
@@ -1929,6 +1940,7 @@ body {
         padding: 0px 3px;
         bottom: -6px;
         border: 3px solid var(--color-black);
+        white-space: nowrap;
     }
 
     .name span {
@@ -1943,6 +1955,19 @@ body {
     }
 
     .right .balloon_one img{
+        width: 76px !important;
+    }
+    
+    .right .balloon_two {
+        position: absolute;
+        top: 170px;
+        right: -65px;
+        z-index: -1;
+        transform: rotate(10deg);
+        animation: balloon2 2s infinite linear, bounce 3.5s infinite ease-in-out;
+    }
+    
+    .right .balloon_two img {
         width: 76px !important;
     }
     
@@ -1963,9 +1988,15 @@ body {
     
     /* Mobile responsive for cat collage section */
     .cat-collage-section {
-        top: 60%;
-        right: 20px;
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        margin-top: 30px;
         gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .cat-collage-section img {
@@ -1975,6 +2006,7 @@ body {
     .cat-collage-btn {
         padding: 6px 15px;
         font-size: 0.8rem;
+        white-space: nowrap;
     }
     
     .cat-collage-btn i {
@@ -1993,8 +2025,6 @@ body {
         font-size: 25px;
     }
 
-
-
     /* Mobile responsive for new elements */
     .flying-cat {
         animation-duration: 20s;
@@ -2006,6 +2036,39 @@ body {
     
     .sparkle {
         font-size: 1rem;
+    }
+    
+    /* Fix overlapping elements */
+    .decorate_star {
+        display: none;
+    }
+    
+    .decorate_flower--one,
+    .decorate_flower--two,
+    .decorate_flower--three {
+        display: none;
+    }
+    
+    .decorate_bottom {
+        display: none;
+    }
+    
+    .smiley__icon {
+        display: none;
+    }
+    
+    /* Ensure proper spacing */
+    .content .left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .content .right {
+        width: 100%;
+    }
+    
+    .box__account {
+        margin: 0 auto;
     }
     
 
