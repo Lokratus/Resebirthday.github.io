@@ -2035,41 +2035,56 @@ body {
         top: auto;
         right: auto;
         transform: none;
-        margin-top: 20px;
-        gap: 10px;
+        margin-top: 15px;
+        gap: 8px;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        max-width: 300px;
+        max-width: 200px;
+        -webkit-animation: none;
+        -moz-animation: none;
+        animation: none;
+        opacity: 1;
+        visibility: visible;
     }
     
     .cat-collage-section img {
-        width: 120px !important;
+        width: 80px !important;
+        height: auto;
     }
     
     .cat-collage-btn {
-        padding: 6px 12px;
-        font-size: 0.7rem;
+        padding: 4px 8px;
+        font-size: 0.6rem;
         white-space: nowrap;
-        max-width: 200px;
+        max-width: 150px;
         text-align: center;
+        line-height: 1.2;
     }
     
     .cat-collage-btn i {
-        margin-left: 4px;
+        margin-left: 3px;
     }
     
     .cat-collage-modal-content {
         width: 95%;
-        height: 95%;
-        padding: 15px;
+        height: 90%;
+        padding: 10px;
     }
     
     .cat-collage-modal .cat-modal-close {
-        top: 10px;
-        right: 20px;
-        font-size: 25px;
+        top: 15px;
+        right: 15px;
+        font-size: 20px;
+        padding: 8px;
+    }
+    
+    .cat-collage-modal-content .cat-collage-full {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
     }
 
     /* Mobile responsive for new elements */
@@ -2117,23 +2132,40 @@ body {
     /* Modal fixes for mobile */
     .boxMail .boxMail-container {
         width: 95vw;
-        height: 90vh;
+        height: 85vh;
         flex-direction: column;
         margin: 0;
+        border-radius: 15px;
     }
     
     .boxMail .boxMail-container .card1,
     .boxMail .boxMail-container .card2 {
         width: 100%;
         height: 50%;
-        padding: 15px;
+        padding: 20px 15px;
+    }
+    
+    .boxMail .boxMail-container .card1 h3 {
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+    
+    .boxMail .boxMail-container .card2 h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
     }
     
     .boxMail .boxMail-container .card2 h2 {
-        font-size: 14px;
-        line-height: 1.4;
-        max-height: 180px;
-        overflow-y: auto;
+        font-size: 16px;
+        line-height: 1.6;
+        max-height: none;
+        overflow-y: visible;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        text-align: left;
+        padding: 0;
+        margin: 0;
     }
     
     /* Ensure proper viewport handling */
